@@ -20,7 +20,7 @@ class Perceptron:
         net -= self.alpha
         if(net >= 0):
             return 1;
-            
+    
         return result
 
     def learn(self, prevResult, goodResult):
@@ -30,20 +30,25 @@ class Perceptron:
     
     
 class Trainer:
-    def __init__(self, file_name, test_set_size):
-        self.file_name = file_name
+    def __init__(self, alpha, train_set_fname):
+        self.alpha = alpha
+        self.train_set_fname = train_set_fname
+        self.train_set = random.shuffle(self.read_file(self.train_set_fname))
         
-    def read_file(file_name):
-        list = []
+    def read_file(self, file_name):
+        listRead = []
         with open(file_name, newline='') as f:
             lines = csv.reader(f, delimiter=";")
         for row in lines:
-            list.append(row)
+            listRead.append(row)
         f.close()
-    
-    def create_sets(trains):
-        test_set_ids = []
-        for ()
+        return listRead
+
+    def train(self, perceptron):
+        for
+
+
+
 
 
 class UI:
