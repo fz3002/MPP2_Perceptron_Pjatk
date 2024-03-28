@@ -81,6 +81,14 @@ class UI:
             print(i + 1, "| Set: ", self.testSet[i][-1], " Peceptron: ", result)
         print("accuracy: ", numberOfGoodGuesses/len(self.testSet))
         
+    def userVector(self):
+        while True:
+            input_vec = []             
+            for i in range(len(self.testSet[0])-1):
+                input_vec.append(float(input("Podaj współrzędną: ")))
+            print(self.perceptron.compute(input_vec))
+            
+        
 def readFile(file_name):
     listVec = []
     with open(file_name, newline='') as f:
